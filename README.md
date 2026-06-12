@@ -5,6 +5,8 @@ home & contents insurers by **value for money**. You enter the annual premium
 each insurer quoted you, and the app ranks them — blending review-based
 reputation with policy coverage.
 
+**Live app:** https://frontalspy.github.io/australian-insurance-quote-comparison/
+
 > ⚠️ **Not financial advice.** Satisfaction scores are curated estimates compiled
 > by hand from public sources. They are a starting point for comparison only.
 > Always confirm cover and pricing in each insurer's current Product Disclosure
