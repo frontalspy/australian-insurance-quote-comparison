@@ -25,46 +25,6 @@ export const DATA_COMPILED = "June 2026";
  */
 export const INSURERS: Insurer[] = [
   {
-    id: "nrma",
-    name: "NRMA Insurance",
-    underwriter: "IAG",
-    reputation: {
-      claimsExperience: 6,
-      customerService: 5.5,
-      valueForMoney: 6,
-      trustReputation: 8,
-      digitalExperience: 6.5,
-    },
-    coverage: {
-      floodCoverIncluded: true,
-      floodOptOutAvailable: true,
-      newForOldContents: true,
-      temporaryAccommodation: true,
-      motorBurnoutDefault: true,
-      emergencyRepairs: true,
-      flexibleExcessRange: true,
-    },
-    pros: [
-      "Strong, trusted brand especially in NSW/ACT",
-      "Comprehensive standard cover and flexible excess",
-      'Finder "most loved" for customer satisfaction',
-    ],
-    cons: [
-      "Premiums trend higher than budget insurers",
-      "Mixed online review sentiment around claims delays",
-    ],
-    sources: [
-      {
-        label: "ProductReview — NRMA Home",
-        url: "https://www.productreview.com.au/listings/nrma-home-insurance",
-      },
-      {
-        label: "CHOICE insurer trust survey",
-        url: "https://www.choice.com.au/money/insurance/insurance-advice/articles/which-insurers-do-australians-trust-the-most",
-      },
-    ],
-  },
-  {
     id: "aami",
     name: "AAMI",
     underwriter: "Suncorp Group",
@@ -144,94 +104,15 @@ export const INSURERS: Insurer[] = [
     ],
   },
   {
-    id: "budget-direct",
-    name: "Budget Direct",
-    underwriter: "Auto & General",
-    reputation: {
-      claimsExperience: 6.5,
-      customerService: 7,
-      valueForMoney: 8.5,
-      trustReputation: 6.5,
-      digitalExperience: 7.5,
-    },
-    coverage: {
-      floodCoverIncluded: true,
-      floodOptOutAvailable: true,
-      newForOldContents: true,
-      temporaryAccommodation: true,
-      motorBurnoutDefault: false,
-      emergencyRepairs: true,
-      flexibleExcessRange: true,
-    },
-    pros: [
-      "Consistently among the cheapest full-cover policies",
-      "Finder Customer Satisfaction award winner",
-      "Higher ProductReview rating than most big brands",
-    ],
-    cons: [
-      "No-frills brand — fewer branches / face-to-face support",
-      "Add-ons needed for some cover others include",
-    ],
-    sources: [
-      {
-        label: "ProductReview — Budget Direct",
-        url: "https://www.productreview.com.au/listings/budget-direct-home-contents-insurance",
-      },
-      {
-        label: "Finder cheapest home insurance",
-        url: "https://www.finder.com.au/home-insurance/cheap-home-insurance",
-      },
-    ],
-  },
-  {
-    id: "suncorp",
-    name: "Suncorp",
+    id: "apia",
+    name: "APIA",
     underwriter: "Suncorp Group",
     reputation: {
-      claimsExperience: 6.5,
+      claimsExperience: 7,
       customerService: 6.5,
-      valueForMoney: 6,
-      trustReputation: 7.5,
-      digitalExperience: 6.5,
-    },
-    coverage: {
-      floodCoverIncluded: true,
-      floodOptOutAvailable: true,
-      newForOldContents: true,
-      temporaryAccommodation: true,
-      motorBurnoutDefault: false,
-      emergencyRepairs: true,
-      flexibleExcessRange: true,
-    },
-    pros: [
-      "Highest overall customer satisfaction in CHOICE survey (77%)",
-      "Strong presence in QLD and comprehensive cover",
-    ],
-    cons: [
-      "Low raw ProductReview score",
-      "Premiums can be high in disaster-prone areas",
-    ],
-    sources: [
-      {
-        label: "ProductReview — Suncorp Home",
-        url: "https://www.productreview.com.au/listings/suncorp-home-insurance",
-      },
-      {
-        label: "CHOICE satisfaction survey",
-        url: "https://www.choice.com.au/money/insurance/insurance-advice/articles/allianz-nrma-qbe-aami-gio-and-suncorp-insurance-compared",
-      },
-    ],
-  },
-  {
-    id: "gio",
-    name: "GIO",
-    underwriter: "Suncorp Group",
-    reputation: {
-      claimsExperience: 6,
-      customerService: 6,
-      valueForMoney: 6,
+      valueForMoney: 5.5,
       trustReputation: 7,
-      digitalExperience: 6,
+      digitalExperience: 5.5,
     },
     coverage: {
       floodCoverIncluded: true,
@@ -243,97 +124,21 @@ export const INSURERS: Insurer[] = [
       flexibleExcessRange: true,
     },
     pros: [
-      "Second-highest customer satisfaction in CHOICE survey (76%)",
-      "Solid comprehensive cover from a major group",
+      "Top-rated for claims expectations met in CHOICE survey",
+      "Tailored to over-50s with relevant benefits",
     ],
     cons: [
-      "Low raw ProductReview score",
-      "Less competitive on price than budget insurers",
+      "Eligibility skewed to over-50s",
+      "Low raw ProductReview score; pricing not the cheapest",
     ],
     sources: [
       {
-        label: "ProductReview — GIO Home",
-        url: "https://www.productreview.com.au/listings/gio-home-and-contents",
+        label: "ProductReview — APIA Home",
+        url: "https://www.productreview.com.au/listings/apia-home-insurance",
       },
       {
-        label: "CHOICE big-insurer comparison",
+        label: "CHOICE claims satisfaction",
         url: "https://www.choice.com.au/money/insurance/insurance-advice/articles/allianz-nrma-qbe-aami-gio-and-suncorp-insurance-compared",
-      },
-    ],
-  },
-  {
-    id: "qbe",
-    name: "QBE",
-    underwriter: "QBE Insurance",
-    reputation: {
-      claimsExperience: 7,
-      customerService: 7.5,
-      valueForMoney: 7.5,
-      trustReputation: 7.5,
-      digitalExperience: 6.5,
-    },
-    coverage: {
-      floodCoverIncluded: true,
-      floodOptOutAvailable: false,
-      newForOldContents: true,
-      temporaryAccommodation: true,
-      motorBurnoutDefault: false,
-      emergencyRepairs: true,
-      flexibleExcessRange: true,
-    },
-    pros: [
-      "High ProductReview rating (~4.5/5) — rare among big insurers",
-      "Canstar Outstanding Value winner across several states",
-    ],
-    cons: [
-      "Less of a household consumer brand",
-      "Quotes can vary widely by region",
-    ],
-    sources: [
-      {
-        label: "ProductReview — QBE Home",
-        url: "https://www.productreview.com.au/listings/qbe-home-and-contents-insurance",
-      },
-      {
-        label: "Canstar Home & Contents Awards",
-        url: "https://www.canstar.com.au/star-ratings-awards/home-and-contents-insurance/",
-      },
-    ],
-  },
-  {
-    id: "youi",
-    name: "Youi",
-    underwriter: "Youi Australia",
-    reputation: {
-      claimsExperience: 7,
-      customerService: 7.5,
-      valueForMoney: 6.5,
-      trustReputation: 6.5,
-      digitalExperience: 8,
-    },
-    coverage: {
-      floodCoverIncluded: true,
-      floodOptOutAvailable: true,
-      newForOldContents: true,
-      temporaryAccommodation: true,
-      motorBurnoutDefault: true,
-      emergencyRepairs: true,
-      flexibleExcessRange: true,
-    },
-    pros: [
-      "Canstar 2025 Most Satisfied Customers award winner",
-      "Tailored, personalised quotes and strong service reputation",
-      "Good ProductReview score relative to peers",
-    ],
-    cons: ["Detailed quote process takes longer", "Not always the cheapest"],
-    sources: [
-      {
-        label: "ProductReview — Youi Home",
-        url: "https://www.productreview.com.au/listings/youi-home-and-contents",
-      },
-      {
-        label: "Canstar Most Satisfied Customers",
-        url: "https://www.canstar.com.au/star-ratings-awards/most-satisfied-customers-home-insurer-awards/",
       },
     ],
   },
@@ -377,15 +182,15 @@ export const INSURERS: Insurer[] = [
     ],
   },
   {
-    id: "apia",
-    name: "APIA",
-    underwriter: "Suncorp Group",
+    id: "budget-direct",
+    name: "Budget Direct",
+    underwriter: "Auto & General",
     reputation: {
-      claimsExperience: 7,
-      customerService: 6.5,
-      valueForMoney: 5.5,
-      trustReputation: 7,
-      digitalExperience: 5.5,
+      claimsExperience: 6.5,
+      customerService: 7,
+      valueForMoney: 8.5,
+      trustReputation: 6.5,
+      digitalExperience: 7.5,
     },
     coverage: {
       floodCoverIncluded: true,
@@ -397,21 +202,22 @@ export const INSURERS: Insurer[] = [
       flexibleExcessRange: true,
     },
     pros: [
-      "Top-rated for claims expectations met in CHOICE survey",
-      "Tailored to over-50s with relevant benefits",
+      "Consistently among the cheapest full-cover policies",
+      "Finder Customer Satisfaction award winner",
+      "Higher ProductReview rating than most big brands",
     ],
     cons: [
-      "Eligibility skewed to over-50s",
-      "Low raw ProductReview score; pricing not the cheapest",
+      "No-frills brand — fewer branches / face-to-face support",
+      "Add-ons needed for some cover others include",
     ],
     sources: [
       {
-        label: "ProductReview — APIA Home",
-        url: "https://www.productreview.com.au/listings/apia-home-insurance",
+        label: "ProductReview — Budget Direct",
+        url: "https://www.productreview.com.au/listings/budget-direct-home-contents-insurance",
       },
       {
-        label: "CHOICE claims satisfaction",
-        url: "https://www.choice.com.au/money/insurance/insurance-advice/articles/allianz-nrma-qbe-aami-gio-and-suncorp-insurance-compared",
+        label: "Finder cheapest home insurance",
+        url: "https://www.finder.com.au/home-insurance/cheap-home-insurance",
       },
     ],
   },
@@ -447,123 +253,6 @@ export const INSURERS: Insurer[] = [
       {
         label: "ProductReview — Coles Home",
         url: "https://www.productreview.com.au/listings/coles-home-building-and-contents",
-      },
-      {
-        label: "Finder best home insurance",
-        url: "https://www.finder.com.au/home-insurance/best-home-insurance",
-      },
-    ],
-  },
-  {
-    id: "everyday",
-    name: "Everyday Insurance (Woolworths)",
-    underwriter: "Hollard",
-    reputation: {
-      claimsExperience: 5,
-      customerService: 5,
-      valueForMoney: 6.5,
-      trustReputation: 6,
-      digitalExperience: 6,
-    },
-    coverage: {
-      floodCoverIncluded: true,
-      floodOptOutAvailable: true,
-      newForOldContents: true,
-      temporaryAccommodation: true,
-      motorBurnoutDefault: false,
-      emergencyRepairs: true,
-      flexibleExcessRange: false,
-    },
-    pros: [
-      "Everyday Rewards points and supermarket-linked discounts",
-      "Often competitively priced",
-    ],
-    cons: [
-      "Low ProductReview score",
-      "Claims and service sentiment below average",
-    ],
-    sources: [
-      {
-        label: "ProductReview — Everyday Home",
-        url: "https://www.productreview.com.au/listings/everyday-home-and-contents-insurance",
-      },
-      {
-        label: "Finder best home insurance",
-        url: "https://www.finder.com.au/home-insurance/best-home-insurance",
-      },
-    ],
-  },
-  {
-    id: "racv",
-    name: "RACV",
-    underwriter: "IAG",
-    reputation: {
-      claimsExperience: 6,
-      customerService: 6,
-      valueForMoney: 5.5,
-      trustReputation: 7.5,
-      digitalExperience: 6,
-    },
-    coverage: {
-      floodCoverIncluded: true,
-      floodOptOutAvailable: true,
-      newForOldContents: true,
-      temporaryAccommodation: true,
-      motorBurnoutDefault: false,
-      emergencyRepairs: true,
-      flexibleExcessRange: true,
-    },
-    pros: [
-      "Strong member trust and brand reputation in Victoria",
-      "Member benefits and multi-policy discounts",
-    ],
-    cons: [
-      "Best value mainly for Victorians / members",
-      "Premiums not the cheapest",
-    ],
-    sources: [
-      {
-        label: "ProductReview — RACV Home",
-        url: "https://www.productreview.com.au/listings/racv-home-and-contents",
-      },
-      {
-        label: "Canstar Home & Contents Awards",
-        url: "https://www.canstar.com.au/star-ratings-awards/home-and-contents-insurance/",
-      },
-    ],
-  },
-  {
-    id: "honey",
-    name: "Honey Insurance",
-    underwriter: "RACQ / Honey",
-    reputation: {
-      claimsExperience: 5.5,
-      customerService: 5.5,
-      valueForMoney: 6.5,
-      trustReputation: 5.5,
-      digitalExperience: 8,
-    },
-    coverage: {
-      floodCoverIncluded: true,
-      floodOptOutAvailable: true,
-      newForOldContents: true,
-      temporaryAccommodation: true,
-      motorBurnoutDefault: false,
-      emergencyRepairs: true,
-      flexibleExcessRange: true,
-    },
-    pros: [
-      "Free smart home sensors and a premium discount for using them",
-      "Modern, fully digital onboarding experience",
-    ],
-    cons: [
-      "Newer insurtech with a shorter track record",
-      "Mixed early ProductReview sentiment",
-    ],
-    sources: [
-      {
-        label: "ProductReview — Honey Insurance",
-        url: "https://www.productreview.com.au/listings/honey-insurance",
       },
       {
         label: "Finder best home insurance",
@@ -612,6 +301,202 @@ export const INSURERS: Insurer[] = [
     ],
   },
   {
+    id: "everyday",
+    name: "Everyday Insurance (Woolworths)",
+    underwriter: "Hollard",
+    reputation: {
+      claimsExperience: 5,
+      customerService: 5,
+      valueForMoney: 6.5,
+      trustReputation: 6,
+      digitalExperience: 6,
+    },
+    coverage: {
+      floodCoverIncluded: true,
+      floodOptOutAvailable: true,
+      newForOldContents: true,
+      temporaryAccommodation: true,
+      motorBurnoutDefault: false,
+      emergencyRepairs: true,
+      flexibleExcessRange: false,
+    },
+    pros: [
+      "Everyday Rewards points and supermarket-linked discounts",
+      "Often competitively priced",
+    ],
+    cons: [
+      "Low ProductReview score",
+      "Claims and service sentiment below average",
+    ],
+    sources: [
+      {
+        label: "ProductReview — Everyday Home",
+        url: "https://www.productreview.com.au/listings/everyday-home-and-contents-insurance",
+      },
+      {
+        label: "Finder best home insurance",
+        url: "https://www.finder.com.au/home-insurance/best-home-insurance",
+      },
+    ],
+  },
+  {
+    id: "gio",
+    name: "GIO",
+    underwriter: "Suncorp Group",
+    reputation: {
+      claimsExperience: 6,
+      customerService: 6,
+      valueForMoney: 6,
+      trustReputation: 7,
+      digitalExperience: 6,
+    },
+    coverage: {
+      floodCoverIncluded: true,
+      floodOptOutAvailable: true,
+      newForOldContents: true,
+      temporaryAccommodation: true,
+      motorBurnoutDefault: false,
+      emergencyRepairs: true,
+      flexibleExcessRange: true,
+    },
+    pros: [
+      "Second-highest customer satisfaction in CHOICE survey (76%)",
+      "Solid comprehensive cover from a major group",
+    ],
+    cons: [
+      "Low raw ProductReview score",
+      "Less competitive on price than budget insurers",
+    ],
+    sources: [
+      {
+        label: "ProductReview — GIO Home",
+        url: "https://www.productreview.com.au/listings/gio-home-and-contents",
+      },
+      {
+        label: "CHOICE big-insurer comparison",
+        url: "https://www.choice.com.au/money/insurance/insurance-advice/articles/allianz-nrma-qbe-aami-gio-and-suncorp-insurance-compared",
+      },
+    ],
+  },
+  {
+    id: "honey",
+    name: "Honey Insurance",
+    underwriter: "RACQ / Honey",
+    reputation: {
+      claimsExperience: 5.5,
+      customerService: 5.5,
+      valueForMoney: 6.5,
+      trustReputation: 5.5,
+      digitalExperience: 8,
+    },
+    coverage: {
+      floodCoverIncluded: true,
+      floodOptOutAvailable: true,
+      newForOldContents: true,
+      temporaryAccommodation: true,
+      motorBurnoutDefault: false,
+      emergencyRepairs: true,
+      flexibleExcessRange: true,
+    },
+    pros: [
+      "Free smart home sensors and a premium discount for using them",
+      "Modern, fully digital onboarding experience",
+    ],
+    cons: [
+      "Newer insurtech with a shorter track record",
+      "Mixed early ProductReview sentiment",
+    ],
+    sources: [
+      {
+        label: "ProductReview — Honey Insurance",
+        url: "https://www.productreview.com.au/listings/honey-insurance",
+      },
+      {
+        label: "Finder best home insurance",
+        url: "https://www.finder.com.au/home-insurance/best-home-insurance",
+      },
+    ],
+  },
+  {
+    id: "nrma",
+    name: "NRMA Insurance",
+    underwriter: "IAG",
+    reputation: {
+      claimsExperience: 6,
+      customerService: 5.5,
+      valueForMoney: 6,
+      trustReputation: 8,
+      digitalExperience: 6.5,
+    },
+    coverage: {
+      floodCoverIncluded: true,
+      floodOptOutAvailable: true,
+      newForOldContents: true,
+      temporaryAccommodation: true,
+      motorBurnoutDefault: true,
+      emergencyRepairs: true,
+      flexibleExcessRange: true,
+    },
+    pros: [
+      "Strong, trusted brand especially in NSW/ACT",
+      "Comprehensive standard cover and flexible excess",
+      'Finder "most loved" for customer satisfaction',
+    ],
+    cons: [
+      "Premiums trend higher than budget insurers",
+      "Mixed online review sentiment around claims delays",
+    ],
+    sources: [
+      {
+        label: "ProductReview — NRMA Home",
+        url: "https://www.productreview.com.au/listings/nrma-home-insurance",
+      },
+      {
+        label: "CHOICE insurer trust survey",
+        url: "https://www.choice.com.au/money/insurance/insurance-advice/articles/which-insurers-do-australians-trust-the-most",
+      },
+    ],
+  },
+  {
+    id: "qbe",
+    name: "QBE",
+    underwriter: "QBE Insurance",
+    reputation: {
+      claimsExperience: 7,
+      customerService: 7.5,
+      valueForMoney: 7.5,
+      trustReputation: 7.5,
+      digitalExperience: 6.5,
+    },
+    coverage: {
+      floodCoverIncluded: true,
+      floodOptOutAvailable: false,
+      newForOldContents: true,
+      temporaryAccommodation: true,
+      motorBurnoutDefault: false,
+      emergencyRepairs: true,
+      flexibleExcessRange: true,
+    },
+    pros: [
+      "High ProductReview rating (~4.5/5) — rare among big insurers",
+      "Canstar Outstanding Value winner across several states",
+    ],
+    cons: [
+      "Less of a household consumer brand",
+      "Quotes can vary widely by region",
+    ],
+    sources: [
+      {
+        label: "ProductReview — QBE Home",
+        url: "https://www.productreview.com.au/listings/qbe-home-and-contents-insurance",
+      },
+      {
+        label: "Canstar Home & Contents Awards",
+        url: "https://www.canstar.com.au/star-ratings-awards/home-and-contents-insurance/",
+      },
+    ],
+  },
+  {
     id: "qantas",
     name: "Qantas Home Insurance",
     underwriter: "Auto & General",
@@ -649,6 +534,121 @@ export const INSURERS: Insurer[] = [
       {
         label: "Finder — Qantas Home Insurance review",
         url: "https://www.finder.com.au/home-insurance/qantas-home-insurance",
+      },
+    ],
+  },
+  {
+    id: "racv",
+    name: "RACV",
+    underwriter: "IAG",
+    reputation: {
+      claimsExperience: 6,
+      customerService: 6,
+      valueForMoney: 5.5,
+      trustReputation: 7.5,
+      digitalExperience: 6,
+    },
+    coverage: {
+      floodCoverIncluded: true,
+      floodOptOutAvailable: true,
+      newForOldContents: true,
+      temporaryAccommodation: true,
+      motorBurnoutDefault: false,
+      emergencyRepairs: true,
+      flexibleExcessRange: true,
+    },
+    pros: [
+      "Strong member trust and brand reputation in Victoria",
+      "Member benefits and multi-policy discounts",
+    ],
+    cons: [
+      "Best value mainly for Victorians / members",
+      "Premiums not the cheapest",
+    ],
+    sources: [
+      {
+        label: "ProductReview — RACV Home",
+        url: "https://www.productreview.com.au/listings/racv-home-and-contents",
+      },
+      {
+        label: "Canstar Home & Contents Awards",
+        url: "https://www.canstar.com.au/star-ratings-awards/home-and-contents-insurance/",
+      },
+    ],
+  },
+  {
+    id: "suncorp",
+    name: "Suncorp",
+    underwriter: "Suncorp Group",
+    reputation: {
+      claimsExperience: 6.5,
+      customerService: 6.5,
+      valueForMoney: 6,
+      trustReputation: 7.5,
+      digitalExperience: 6.5,
+    },
+    coverage: {
+      floodCoverIncluded: true,
+      floodOptOutAvailable: true,
+      newForOldContents: true,
+      temporaryAccommodation: true,
+      motorBurnoutDefault: false,
+      emergencyRepairs: true,
+      flexibleExcessRange: true,
+    },
+    pros: [
+      "Highest overall customer satisfaction in CHOICE survey (77%)",
+      "Strong presence in QLD and comprehensive cover",
+    ],
+    cons: [
+      "Low raw ProductReview score",
+      "Premiums can be high in disaster-prone areas",
+    ],
+    sources: [
+      {
+        label: "ProductReview — Suncorp Home",
+        url: "https://www.productreview.com.au/listings/suncorp-home-insurance",
+      },
+      {
+        label: "CHOICE satisfaction survey",
+        url: "https://www.choice.com.au/money/insurance/insurance-advice/articles/allianz-nrma-qbe-aami-gio-and-suncorp-insurance-compared",
+      },
+    ],
+  },
+  {
+    id: "youi",
+    name: "Youi",
+    underwriter: "Youi Australia",
+    reputation: {
+      claimsExperience: 7,
+      customerService: 7.5,
+      valueForMoney: 6.5,
+      trustReputation: 6.5,
+      digitalExperience: 8,
+    },
+    coverage: {
+      floodCoverIncluded: true,
+      floodOptOutAvailable: true,
+      newForOldContents: true,
+      temporaryAccommodation: true,
+      motorBurnoutDefault: true,
+      emergencyRepairs: true,
+      flexibleExcessRange: true,
+    },
+    pros: [
+      "Canstar 2025 Most Satisfied Customers award winner",
+      "Tailored, personalised quotes and strong service reputation",
+      "Good ProductReview score relative to peers",
+    ],
+    cons: ["Detailed quote process takes longer", "Not always the cheapest"],
+    sources: [
+      {
+        label: "ProductReview — Youi Home",
+        url: "https://www.productreview.com.au/listings/youi-home-and-contents",
+      },
+      {
+        label: "Canstar Most Satisfied Customers",
+        url: "https://www.canstar.com.au/star-ratings-awards/most-satisfied-customers-home-insurer-awards/",
       },
     ],
   },
