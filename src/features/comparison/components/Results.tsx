@@ -97,7 +97,8 @@ export default function Results({ results }: Props) {
                 onClick={() => setExpanded(true)}
                 className="mt-3 w-full rounded-lg border border-slate-200 bg-white py-2.5 text-sm font-medium text-slate-600 shadow-sm hover:bg-slate-50 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand"
               >
-                Show {hiddenCount} more insurer{hiddenCount !== 1 ? "s" : ""}
+                Show {hiddenCount} more insurer result
+                {hiddenCount !== 1 ? "s" : ""}
               </button>
             </>
           )}
