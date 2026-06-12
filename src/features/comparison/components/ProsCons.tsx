@@ -1,4 +1,4 @@
-import type { Insurer } from '../../../types';
+import type { Insurer } from "../../../types";
 
 interface Props {
   insurer: Insurer;
@@ -25,10 +25,10 @@ export default function ProsCons({ insurer }: Props) {
       </div>
       <div className="sm:col-span-2">
         <p className="text-xs text-slate-400">
-          Sources:{' '}
+          Sources:{" "}
           {insurer.sources.map((source, i) => (
             <span key={source.url}>
-              {i > 0 && ' · '}
+              {i > 0 && " · "}
               <a
                 href={source.url}
                 target="_blank"

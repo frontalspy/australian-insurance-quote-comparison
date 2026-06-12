@@ -1,5 +1,5 @@
-import type { RankedResult } from "../../../types";
 import ScoreBar from "../../../components/ScoreBar";
+import type { RankedResult } from "../../../types";
 
 interface Props {
   result: RankedResult;
@@ -112,7 +112,9 @@ export default function InsurerCard({ result, rank, isBest }: Props) {
         <div className="mt-3 space-y-1 text-sm">
           <span className="text-slate-600">
             Quote:{" "}
-            <strong className="tabular-nums">${price.toLocaleString()}/yr</strong>
+            <strong className="tabular-nums">
+              ${price.toLocaleString()}/yr
+            </strong>
           </span>
           <div>
             <span

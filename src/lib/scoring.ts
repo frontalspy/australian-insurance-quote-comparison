@@ -5,7 +5,7 @@ import type {
   RankedResult,
   ReputationScores,
   Weights,
-} from '../types';
+} from "../types";
 
 /**
  * Default weighting. Reputation is emphasised over coverage (70/30) because the
@@ -41,21 +41,45 @@ export const COVERAGE_FEATURES: {
   label: string;
   points: number;
 }[] = [
-  { key: 'floodCoverIncluded', label: 'Flood cover included as standard', points: 5 },
-  { key: 'newForOldContents', label: 'New-for-old contents replacement', points: 4 },
-  { key: 'temporaryAccommodation', label: 'Temporary accommodation cover', points: 4 },
-  { key: 'emergencyRepairs', label: 'Emergency repairs / make-safe', points: 3 },
-  { key: 'motorBurnoutDefault', label: 'Motor burnout cover by default', points: 2 },
-  { key: 'flexibleExcessRange', label: 'Flexible excess options', points: 2 },
-  { key: 'floodOptOutAvailable', label: 'Option to opt out of flood cover', points: 1 },
+  {
+    key: "floodCoverIncluded",
+    label: "Flood cover included as standard",
+    points: 5,
+  },
+  {
+    key: "newForOldContents",
+    label: "New-for-old contents replacement",
+    points: 4,
+  },
+  {
+    key: "temporaryAccommodation",
+    label: "Temporary accommodation cover",
+    points: 4,
+  },
+  {
+    key: "emergencyRepairs",
+    label: "Emergency repairs / make-safe",
+    points: 3,
+  },
+  {
+    key: "motorBurnoutDefault",
+    label: "Motor burnout cover by default",
+    points: 2,
+  },
+  { key: "flexibleExcessRange", label: "Flexible excess options", points: 2 },
+  {
+    key: "floodOptOutAvailable",
+    label: "Option to opt out of flood cover",
+    points: 1,
+  },
 ];
 
 const REPUTATION_KEYS: (keyof ReputationScores)[] = [
-  'claimsExperience',
-  'customerService',
-  'valueForMoney',
-  'trustReputation',
-  'digitalExperience',
+  "claimsExperience",
+  "customerService",
+  "valueForMoney",
+  "trustReputation",
+  "digitalExperience",
 ];
 
 const sum = (nums: number[]) => nums.reduce((a, b) => a + b, 0);
@@ -66,7 +90,7 @@ const sum = (nums: number[]) => nums.reduce((a, b) => a + b, 0);
  */
 export function reputationSubScore(
   reputation: ReputationScores,
-  weights: Weights['reputation'],
+  weights: Weights["reputation"]
 ): number {
   const totalWeight = sum(REPUTATION_KEYS.map((k) => weights[k]));
   if (totalWeight <= 0) return 0;
@@ -81,7 +105,7 @@ const MAX_COVERAGE_POINTS = sum(COVERAGE_FEATURES.map((f) => f.points));
 export function coverageSubScore(coverage: CoverageFeatures): number {
   if (MAX_COVERAGE_POINTS <= 0) return 0;
   const earned = sum(
-    COVERAGE_FEATURES.filter((f) => coverage[f.key]).map((f) => f.points),
+    COVERAGE_FEATURES.filter((f) => coverage[f.key]).map((f) => f.points)
   );
   return (earned / MAX_COVERAGE_POINTS) * 100;
 }
@@ -114,7 +138,7 @@ export const RATIO_SCALE = 1000;
 export function rankInsurers(
   insurers: Insurer[],
   quotes: Quotes,
-  weights: Weights,
+  weights: Weights
 ): RankedResult[] {
   const results: RankedResult[] = insurers.map((insurer) => {
     const price = quotes[insurer.id] ?? null;
@@ -126,7 +150,7 @@ export function rankInsurers(
       satisfactionScore: sScore,
       reputationSubScore: reputationSubScore(
         insurer.reputation,
-        weights.reputation,
+        weights.reputation
       ),
       coverageSubScore: coverageSubScore(insurer.coverage),
       price,

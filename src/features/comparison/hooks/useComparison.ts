@@ -1,8 +1,13 @@
-import { useEffect, useMemo, useState } from 'react';
-import type { Quotes, Weights } from '../../../types';
-import { INSURERS } from '../../../data/insurers';
-import { rankInsurers } from '../../../lib/scoring';
-import { loadQuotes, loadWeights, saveQuotes, saveWeights } from '../../../lib/storage';
+import { useEffect, useMemo, useState } from "react";
+import { INSURERS } from "../../../data/insurers";
+import { rankInsurers } from "../../../lib/scoring";
+import {
+  loadQuotes,
+  loadWeights,
+  saveQuotes,
+  saveWeights,
+} from "../../../lib/storage";
+import type { Quotes, Weights } from "../../../types";
 
 export function useComparison() {
   const [quotes, setQuotes] = useState<Quotes>(() => loadQuotes());
@@ -13,7 +18,7 @@ export function useComparison() {
 
   const results = useMemo(
     () => rankInsurers(INSURERS, quotes, weights),
-    [quotes, weights],
+    [quotes, weights]
   );
 
   const setQuote = (id: string, value: number | null) =>

@@ -1,7 +1,7 @@
-import type { ReputationScores, Weights } from '../../../types';
-import { DEFAULT_WEIGHTS } from '../../../lib/scoring';
-import Slider from '../../../components/Slider';
-import { REPUTATION_LABELS } from '../data/reputationLabels';
+import Slider from "../../../components/Slider";
+import { DEFAULT_WEIGHTS } from "../../../lib/scoring";
+import type { ReputationScores, Weights } from "../../../types";
+import { REPUTATION_LABELS } from "../data/reputationLabels";
 
 interface Props {
   weights: Weights;
@@ -31,7 +31,9 @@ export default function WeightControls({ weights, onWeightsChange }: Props) {
   return (
     <section className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold text-slate-800">Adjust the weighting</h2>
+        <h2 className="text-lg font-semibold text-slate-800">
+          Adjust the weighting
+        </h2>
         <button
           type="button"
           onClick={() => onWeightsChange(DEFAULT_WEIGHTS)}
@@ -61,7 +63,9 @@ export default function WeightControls({ weights, onWeightsChange }: Props) {
       </div>
 
       <div className="mt-5">
-        <h3 className="text-sm font-semibold text-slate-700">Reputation breakdown</h3>
+        <h3 className="text-sm font-semibold text-slate-700">
+          Reputation breakdown
+        </h3>
         <div className="mt-2 grid gap-3 sm:grid-cols-2">
           {REPUTATION_LABELS.map(({ key, label }) => (
             <Slider

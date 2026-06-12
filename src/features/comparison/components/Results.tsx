@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import type { RankedResult } from '../../../types';
-import InsurerCard from './InsurerCard';
+import { useState } from "react";
+import type { RankedResult } from "../../../types";
+import InsurerCard from "./InsurerCard";
 
 interface Props {
   results: RankedResult[];
@@ -30,8 +30,8 @@ export default function Results({ results }: Props) {
       <h2 className="text-lg font-semibold text-slate-800">Results</h2>
       <p className="mt-1 text-sm text-slate-500">
         {anyPriced
-          ? 'Ranked by value — satisfaction score shown for comparison.'
-          : 'Enter at least one quote above to rank by value. Insurers below are sorted by satisfaction score.'}
+          ? "Ranked by value — satisfaction score shown for comparison."
+          : "Enter at least one quote above to rank by value. Insurers below are sorted by satisfaction score."}
       </p>
 
       {anyPriced && (
@@ -79,7 +79,10 @@ export default function Results({ results }: Props) {
 
           {!expanded && hasMore && unpricedPeek && (
             <>
-              <div className="relative mt-3 overflow-hidden" style={{ maxHeight: '3.5rem' }}>
+              <div
+                className="relative mt-3 overflow-hidden"
+                style={{ maxHeight: "3.5rem" }}
+              >
                 <ol>
                   <InsurerCard
                     result={unpricedPeek}
@@ -94,7 +97,7 @@ export default function Results({ results }: Props) {
                 onClick={() => setExpanded(true)}
                 className="mt-3 w-full rounded-lg border border-slate-200 bg-white py-2.5 text-sm font-medium text-slate-600 shadow-sm hover:bg-slate-50 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand"
               >
-                Show {hiddenCount} more insurer{hiddenCount !== 1 ? 's' : ''}
+                Show {hiddenCount} more insurer{hiddenCount !== 1 ? "s" : ""}
               </button>
             </>
           )}

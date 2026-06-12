@@ -1,8 +1,8 @@
-import type { Quotes, Weights } from '../types';
-import { DEFAULT_WEIGHTS } from './scoring';
+import type { Quotes, Weights } from "../types";
+import { DEFAULT_WEIGHTS } from "./scoring";
 
-const QUOTES_KEY = 'ahivc.quotes.v1';
-const WEIGHTS_KEY = 'ahivc.weights.v1';
+const QUOTES_KEY = "ahivc.quotes.v1";
+const WEIGHTS_KEY = "ahivc.weights.v1";
 
 function read<T>(key: string, fallback: T): T {
   try {
