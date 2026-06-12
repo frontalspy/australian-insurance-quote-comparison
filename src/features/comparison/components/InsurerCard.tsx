@@ -109,20 +109,20 @@ export default function InsurerCard({ result, rank, isBest }: Props) {
       </div>
 
       {price != null && (
-        <div className="mt-3 space-y-1 text-sm">
-          <div className="flex items-center justify-between">
-            <span className="text-slate-600">
-              Quote:{" "}
-              <strong className="tabular-nums">
-                ${price.toLocaleString()}/yr
-              </strong>
-            </span>
+        <div className="mt-3 text-sm">
+          <p className="text-slate-600">
+            Quote:{" "}
+            <strong className="tabular-nums">
+              ${price.toLocaleString()}/yr
+            </strong>
+          </p>
+          <p className="mt-1 text-right">
             <span
               className={`inline-block rounded-full px-2 py-0.5 text-xs font-semibold ${satisfactionBadgeClasses(satisfactionScore)}`}
             >
               {satisfactionScore.toFixed(0)}/100 satisfaction
             </span>
-          </div>
+          </p>
         </div>
       )}
 
