@@ -110,13 +110,13 @@ export default function InsurerCard({ result, rank, isBest }: Props) {
 
       {price != null && (
         <div className="mt-3 space-y-1 text-sm">
-          <span className="text-slate-600">
-            Quote:{" "}
-            <strong className="tabular-nums">
-              ${price.toLocaleString()}/yr
-            </strong>
-          </span>
-          <div>
+          <div className="flex items-center justify-between">
+            <span className="text-slate-600">
+              Quote:{" "}
+              <strong className="tabular-nums">
+                ${price.toLocaleString()}/yr
+              </strong>
+            </span>
             <span
               className={`inline-block rounded-full px-2 py-0.5 text-xs font-semibold ${satisfactionBadgeClasses(satisfactionScore)}`}
             >
