@@ -43,7 +43,7 @@ export default function QuoteRow({
                 e.target.value === "" ? null : Number(e.target.value)
               )
             }
-            className="w-28 rounded-md border border-slate-300 py-1.5 pl-5 pr-2 text-right tabular-nums focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
+            className="w-24 rounded-md border border-slate-300 py-1.5 pl-5 pr-2 text-right tabular-nums focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand sm:w-28"
           />
         </div>
         <button

@@ -9,7 +9,7 @@ export default function App() {
   const { quotes, weights, results, setQuote, setWeights } = useComparison();
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-8">
+    <div className="mx-auto max-w-5xl px-4 py-6 lg:py-8">
       <header className="mb-6">
         <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
           Aussie Home Insurance{" "}
@@ -26,16 +26,24 @@ export default function App() {
         <Disclaimer />
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
-        <div className="space-y-6">
+      {/*
+        Mobile order: QuoteTable → Results → WeightControls
+        Desktop: QuoteTable + WeightControls in left column, Results spans right column
+      */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="lg:col-start-1 lg:row-start-1">
           <QuoteTable
             insurers={INSURERS}
             quotes={quotes}
             onQuoteChange={setQuote}
           />
+        </div>
+        <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <Results results={results} />
+        </div>
+        <div className="lg:col-start-1 lg:row-start-2">
           <WeightControls weights={weights} onWeightsChange={setWeights} />
         </div>
-        <Results results={results} />
       </div>
 
       <footer className="mt-10 border-t border-slate-200 pt-4 text-center text-xs text-slate-400">
