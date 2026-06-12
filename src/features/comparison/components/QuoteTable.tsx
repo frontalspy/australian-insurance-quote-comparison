@@ -8,13 +8,24 @@ interface Props {
   onQuoteChange: (id: string, value: number | null) => void;
 }
 
+const FOLD_COUNT = 5;
+
 export default function QuoteTable({ insurers, quotes, onQuoteChange }: Props) {
   const [search, setSearch] = useState("");
+  const [expanded, setExpanded] = useState(false);
 
   const term = search.trim().toLowerCase();
-  const visible = term
+  const isSearching = term.length > 0;
+  const filtered = isSearching
     ? insurers.filter((i) => i.name.toLowerCase().includes(term))
     : insurers;
+
+  // Fold only applies when not actively searching
+  const visible =
+    isSearching || expanded ? filtered : filtered.slice(0, FOLD_COUNT);
+  const hiddenCount = isSearching
+    ? 0
+    : Math.max(0, filtered.length - FOLD_COUNT);
 
   return (
     <section className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -62,10 +73,20 @@ export default function QuoteTable({ insurers, quotes, onQuoteChange }: Props) {
           ))
         ) : (
           <li className="py-6 text-center text-sm text-slate-400">
-            No insurers match "{search.trim()}"
+            No insurers match &ldquo;{search.trim()}&rdquo;
           </li>
         )}
       </ul>
+
+      {!isSearching && !expanded && hiddenCount > 0 && (
+        <button
+          type="button"
+          onClick={() => setExpanded(true)}
+          className="mt-2 w-full rounded-lg border border-slate-200 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand"
+        >
+          Show {hiddenCount} more insurer{hiddenCount !== 1 ? "s" : ""}
+        </button>
+      )}
     </section>
   );
 }
