@@ -124,11 +124,19 @@ export function satisfactionScore(insurer: Insurer, weights: Weights): number {
 }
 
 /**
- * Scaling factor for the price-to-value ratio. satisfactionScore/price tends
- * to be a tiny decimal (e.g. 78/1500). Multiplying by 1000 yields a readable
- * number without changing the ranking order.
+ * Exponent applied to price when computing the ratio. A value of 1.0 gives
+ * price full linear influence; 0.8 reduces that influence by ~20% so that
+ * large price differences count somewhat less than raw satisfaction quality.
  */
-export const RATIO_SCALE = 1000;
+export const PRICE_EXPONENT = 0.8;
+
+/**
+ * Scaling factor for the price-to-value ratio. Calibrated so that a
+ * satisfaction score of 70 at a $1 500 reference price produces a ratio of
+ * ~47, keeping tier thresholds (Bargain ≥65, Great Deal ≥45 …) meaningful
+ * after the PRICE_EXPONENT adjustment.
+ */
+export const RATIO_SCALE = 230;
 
 /**
  * Rank insurers. Insurers with a price are ranked by price-to-value ratio
@@ -144,7 +152,9 @@ export function rankInsurers(
     const price = quotes[insurer.id] ?? null;
     const sScore = satisfactionScore(insurer, weights);
     const ratio =
-      price != null && price > 0 ? (sScore / price) * RATIO_SCALE : null;
+      price != null && price > 0
+        ? (sScore / price ** PRICE_EXPONENT) * RATIO_SCALE
+        : null;
     return {
       insurer,
       satisfactionScore: sScore,

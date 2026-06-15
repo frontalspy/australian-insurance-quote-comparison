@@ -4,6 +4,7 @@ import {
   COVERAGE_FEATURES,
   coverageSubScore,
   DEFAULT_WEIGHTS,
+  PRICE_EXPONENT,
   RATIO_SCALE,
   rankInsurers,
   reputationSubScore,
@@ -147,8 +148,10 @@ describe("rankInsurers", () => {
     expect(ranked[1].ratio).toBeNull();
   });
 
-  it("computes ratio as scaled satisfactionScore / price", () => {
+  it("computes ratio as scaled satisfactionScore / price^PRICE_EXPONENT", () => {
     const ranked = rankInsurers([high], { high: 1000 }, DEFAULT_WEIGHTS);
-    expect(ranked[0].ratio).toBeCloseTo((86 / 1000) * RATIO_SCALE);
+    expect(ranked[0].ratio).toBeCloseTo(
+      (86 / 1000 ** PRICE_EXPONENT) * RATIO_SCALE
+    );
   });
 });
